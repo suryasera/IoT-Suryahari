@@ -4,8 +4,8 @@
 import RPi.GPIO as GPIO
 #Import time function Library
 import time
-a = 0
-while a <= 5
+a=0
+while a<=5
 #Configure GPIO in Raspberry Pi BCM Mode
   GPIO.setmode(GPIO.BCM) 
 #Configure GPIO Pin 17 as output
