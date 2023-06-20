@@ -25,22 +25,19 @@ while True:
         print(gas_status)
 
         if flame_status == GPIO.LOW or gas_status == GPIO.LOW:
-                elif flame_status == GPIO.LOW
+        GPIO.output(buzzer_pin, GPIO.HIGH)
+                if flame_status == GPIO.LOW
                 GPIO.output(buzzer_pin, GPIO.HIGH)
                 print(C1)
-                        elif gas_status == GPIO.LOW
- 	                GPIO.output(buzzer_pin, GPIO.HIGH)
-                        print(C2)
-                                elif flame_status == GPIO.LOW and gas_status == GPIO.LOW
- 		                GPIO.output(buzzer_pin, GPIO.HIGH)
-                                print(C3)
-                                        elif flame_status == GPIO.HIGH and gas_status == GPIO.HIGH
-                                        GPIO.output(buzzer_pin, GPIO.LOW)
-                                        print(C4)
-                                        print("Safe")
+                elif gas_status == GPIO.LOW
+ 	        GPIO.output(buzzer_pin, GPIO.HIGH)
+                print(C2)
+                elif flame_status == GPIO.LOW and gas_status == GPIO.LOW
+ 		GPIO.output(buzzer_pin, GPIO.HIGH)
+                print(C3)                               
         else:
-        GPIO.output(buzzer_pin, GPIO.HIGH)
-        print("Danger! Flame or gas detected!")
+        GPIO.output(buzzer_pin, GPIO.LOW)
+        print(C4)
 
 # Delay for stability
 time.sleep(0.1)
