@@ -29,6 +29,6 @@ while True:
         # Delay for stability
         time.sleep(0.1)
 
-except KeyboardInterrupt:
-    # Clean up GPIO settings on keyboard interrupt
-    GPIO.cleanup()
+# except KeyboardInterrupt:
+#     # Clean up GPIO settings on keyboard interrupt
+#     GPIO.cleanup()
