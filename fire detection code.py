@@ -16,6 +16,8 @@ GPIO.setup(buzzer_pin, GPIO.OUT)
 while True:
         flame_status = GPIO.input(fire_pin)
         gas_status = GPIO.input(gas_pin)
+        print(flame_status)
+        print(gas_status)
 
         if flame_status == GPIO.HIGH or gas_status == GPIO.HIGH:
             # Turn on the buzzer
