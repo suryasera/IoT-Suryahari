@@ -9,7 +9,7 @@ fire_pin = 27
 gas_pin = 22
 buzzer_pin = 17
 # Set up GPIO pins
-GPIO.setup(flame_pin, GPIO.IN)
+GPIO.setup(fire_pin, GPIO.IN)
 GPIO.setup(gas_pin, GPIO.IN)
 GPIO.setup(buzzer_pin, GPIO.OUT)
 #Loop
