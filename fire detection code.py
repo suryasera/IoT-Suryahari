@@ -14,7 +14,7 @@ GPIO.setup(gas_pin, GPIO.IN)
 GPIO.setup(buzzer_pin, GPIO.OUT)
 #Loop
 while True:
-        flame_status = GPIO.input(flame_pin)
+        flame_status = GPIO.input(fire_pin)
         gas_status = GPIO.input(gas_pin)
 
         if flame_status == GPIO.HIGH or gas_status == GPIO.HIGH:
