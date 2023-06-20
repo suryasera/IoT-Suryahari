@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 #Import time function Library
 import time
 #Configure GPIO in Raspberry Pi BCM Mode
-GPIO.setmode(GPIO.BOARD) 
+GPIO.setmode(GPIO.BCM) 
 # Set the GPIO pins for the fire sensor, MQ2 gas sensor, and buzzer
 fire_pin = 27
 gas_pin = 22
