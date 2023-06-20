@@ -12,7 +12,7 @@ buzzer_pin = 17
 C1 = "fire detected"
 C2 = "smoke detected"
 C3 = "fire and smoke detected"
-C4 = "no fire and no smoke"
+C4 = "no fire and no smoke detected"
 # Set up GPIO pins
 GPIO.setup(fire_pin, GPIO.IN)
 GPIO.setup(gas_pin, GPIO.IN)
@@ -25,32 +25,19 @@ while True:
         print(gas_status)
 
         if flame_status == GPIO.LOW or gas_status == GPIO.LOW:
-                if flame_status == GPIO.LOW
+                elif flame_status == GPIO.LOW
                 GPIO.output(buzzer_pin, GPIO.HIGH)
                 print(C1)
-                        if gas_status == GPIO.LOW
+                        elif gas_status == GPIO.LOW
  	                GPIO.output(buzzer_pin, GPIO.HIGH)
                         print(C2)
-                                if flame_status == GPIO.LOW and gas_status == GPIO.LOW
+                                elif flame_status == GPIO.LOW and gas_status == GPIO.LOW
  		                GPIO.output(buzzer_pin, GPIO.HIGH)
                                 print(C3)
-                                        if flame_status == GPIO.HIGH and gas_status == GPIO.HIGH
+                                        elif flame_status == GPIO.HIGH and gas_status == GPIO.HIGH
                                         GPIO.output(buzzer_pin, GPIO.LOW)
                                         print(C4)
                                         print("Safe")
-                                        else:
-                                        GPIO.output(buzzer_pin, GPIO.HIGH)
-                                        print("Danger! Flame or gas detected!")
-                                else:
-                                # Turn off the buzzer
-                                GPIO.output(buzzer_pin, GPIO.LOW)
-                        else:
-                        # Turn off the buzzer
-                        GPIO.output(buzzer_pin, GPIO.LOW)
-                else:    
-                # Turn off the buzzer
-                GPIO.output(buzzer_pin, GPIO.LOW)
-                print("Safe")
         else:
         GPIO.output(buzzer_pin, GPIO.HIGH)
         print("Danger! Flame or gas detected!")
