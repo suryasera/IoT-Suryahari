@@ -19,7 +19,7 @@ while True:
         print(flame_status)
         print(gas_status)
 
-        if flame_status == GPIO.HIGH or gas_status == GPIO.HIGH:
+        if flame_status == GPIO.LOW or gas_status == GPIO.LOW:
             # Turn on the buzzer
             GPIO.output(buzzer_pin, GPIO.HIGH)
             print("Danger! Flame or gas detected!")
